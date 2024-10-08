@@ -42,9 +42,17 @@ function removeWorkshopByName(name) {
     })
 }
 
-function updateWorkshop(name, description) {
+function updateWorkshop(name, newName,newDescription) {
     return new Promise((resolve, reject) => {
-        reject(new Error("Not implemented"))
+        const workshop = getWorkshopByName(name);
+
+        if (workshop) {
+            workshop.name = newName;
+            workshop.description = newDescription;
+            resolve(workshop);
+        } else {
+            reject(new Error("The workshop was not found"))
+        }
     })
 }
 

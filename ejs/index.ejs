@@ -8,7 +8,7 @@
 
 <div class="jumbotron">
     <h1>Workshops</h1>
-    <p>here is the list of workshop</p>
+    <p>Here is a list of all the workshops of the event</p>
 </div>
 
 <a type="button" href="/workshop" class="btn btn-success btn-lg">Create new workshop</a>
@@ -17,7 +17,7 @@
 <% workshops.forEach(function(workshop) { %>
     <li class="media my-4">
         <div class="media-body">
-            <h5 class="mt-0 mb-1"><%= workshop.name %></h5>
+            <h5 class="mt-0 mb-1"><%= workshop.name %></h5> <a type="button" href="/workshop" class="btn btn-success btn-lg">Update</a>
             <%= workshop.description %>        </div>        
     </li>
 <% }); %>
